@@ -19,10 +19,9 @@ function FilteredEventsPage(props) {
 
   const filterData = router.query.slug;
 
-  const fetchURL = process.env.FIREBASE_EVENTES_DATABASE_URL;
+  const fetchURL = process.env.NEXT_PUBLIC_FIREBASE_EVENTES_DATABASE_URL;
 
-  // const { data, error } = useSWR(`${fetchURL}events.json`, fetcher);
-  const { data, error } = useSWR(`https://nextjs-events-91d66-default-rtdb.firebaseio.com/events.json`, fetcher);
+  const { data, error } = useSWR(`${fetchURL}events.json`, fetcher);
 
   useEffect(() => {
     if (data) {

@@ -1,6 +1,6 @@
 export async function getAllEvents() {
 
-  const fetchURL = process.env.FIREBASE_EVENTES_DATABASE_URL;
+  const fetchURL = process.env.NEXT_PUBLIC_FIREBASE_EVENTES_DATABASE_URL;
   const response = await fetch(`${fetchURL}events.json`);
   const data = await response.json();
 
